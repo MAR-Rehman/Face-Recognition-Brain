@@ -77,7 +77,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://api.render.com/deploy/srv-cl7ql4ivokcc73ap7qn0?key=w6WzVnCH4U0/imageurl', {
+      fetch('https://facecheckerbackend.onrender.com/imageurl', {
               method: 'post',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
@@ -88,7 +88,7 @@ class App extends Component {
             .then(response => {
               console.log('hi', response)
               if (response) {
-                fetch('https://api.render.com/deploy/srv-cl7ql4ivokcc73ap7qn0?key=w6WzVnCH4U0/image', {
+                fetch('https://facecheckerbackend.onrender.com/image', {
                   method: 'put',
                   headers: {'Content-Type': 'application/json'},
                   body: JSON.stringify({
